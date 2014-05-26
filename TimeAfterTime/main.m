@@ -13,8 +13,7 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
-        NSDate *now = [NSDate date];
+        NSDate *now = [[NSDate alloc]init];
         NSDateComponents * comps = [[NSDateComponents alloc] init];
         [comps setYear:1987];
         [comps setMonth:12];
@@ -27,6 +26,12 @@ int main(int argc, const char * argv[])
         NSDate *dateOfBirth = [g dateFromComponents:comps];
         double d = [now timeIntervalSinceDate:dateOfBirth];
         NSLog(@"I have been lived %f seconds", d);
+        
+        NSCalendar *cal = [NSCalendar currentCalendar];
+        NSUInteger day = [cal ordinalityOfUnit: NSHourCalendarUnit
+                                        inUnit: NSDayCalendarUnit
+                                       forDate:now];
+        NSLog(@"This is hour %lu of today", day);
     }
     return 0;
 }

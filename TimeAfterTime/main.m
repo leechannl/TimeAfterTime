@@ -14,8 +14,19 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         // insert code here...
-        NSLog(@"Hello, World!");
+        NSDate *now = [NSDate date];
+        NSDateComponents * comps = [[NSDateComponents alloc] init];
+        [comps setYear:1987];
+        [comps setMonth:12];
+        [comps setDay:16];
+        [comps setHour:0];
+        [comps setMinute:0];
+        [comps setSecond:0];
         
+        NSCalendar *g = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDate *dateOfBirth = [g dateFromComponents:comps];
+        double d = [now timeIntervalSinceDate:dateOfBirth];
+        NSLog(@"I have been lived %f seconds", d);
     }
     return 0;
 }

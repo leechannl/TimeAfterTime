@@ -13,8 +13,8 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        NSDate *now = [[NSDate alloc]init];
-        NSDateComponents * comps = [[NSDateComponents alloc] init];
+        NSDate *now = [[NSDate alloc] init];
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
         [comps setYear:1987];
         [comps setMonth:12];
         [comps setDay:16];
@@ -32,7 +32,16 @@ int main(int argc, const char * argv[])
                                         inUnit: NSDayCalendarUnit
                                        forDate:now];
         NSLog(@"This is hour %lu of today", day);
+
+        NSTimeZone *tz = [NSTimeZone systemTimeZone];
+        BOOL result = [tz isDaylightSavingTime];
+        NSLog(@"tz is %@", tz);
+        if (result == false) {
+            NSLog(@"you are not in day light saving time.");
+        } else {
+            NSLog(@"you are in day light saving time.");
+        }
     }
+
     return 0;
 }
-

@@ -41,6 +41,10 @@ int main(int argc, const char * argv[])
         } else {
             NSLog(@"you are in day light saving time.");
         }
+
+        NSHost *currentHost = [NSHost currentHost];
+        NSString *localizeName = [currentHost localizedName];
+        NSLog(@"current host is %@", localizeName);
     }
 
     return 0;

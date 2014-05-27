@@ -31,6 +31,7 @@
 		8D03B74C1931DA7300936816 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D03B74F1931DA7300936816 /* TimeAfterTime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeAfterTime-Prefix.pch"; sourceTree = "<group>"; };
 		8D03B7501931DA7300936816 /* TimeAfterTime.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TimeAfterTime.1; sourceTree = "<group>"; };
+		8DDF33D8193467D2006382BD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8D03B74C1931DA7300936816 /* main.m */,
+				8DDF33D8193467D2006382BD /* .gitignore */,
 				8D03B7501931DA7300936816 /* TimeAfterTime.1 */,
 				8D03B74E1931DA7300936816 /* Supporting Files */,
 			);
@@ -253,6 +255,7 @@
 				8D03B7561931DA7300936816 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

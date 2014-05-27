@@ -14,6 +14,13 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         NSDate *now = [[NSDate alloc] init];
+        NSDate *tomorow = [now dateByAddingTimeInterval:24.0 * 60.0 * 60.0];
+        NSDate *yesterday = [now dateByAddingTimeInterval:-24.0 * 60.0 * 60.0];
+        NSArray *dateList = [NSArray arrayWithObjects:now, tomorow, yesterday, nil];
+        NSLog(@"there are %lu dates", [dateList count]);
+        NSLog(@"the first date is %@", [dateList objectAtIndex:0]);
+        NSLog(@"the second date is %@", [dateList objectAtIndex:1]);
+
         NSDateComponents *comps = [[NSDateComponents alloc] init];
         [comps setYear:1987];
         [comps setMonth:12];
